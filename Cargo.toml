@@ -1,0 +1,19 @@
+[package]
+name = "winit-wgpu-sample"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "pr-6210"
+path = "src/main_pr6210.rs"
+
+[[bin]]
+name = "trunk-patched"
+path = "src/main_patch.rs"
+
+[dependencies]
+pollster = "0.4.0"
+winit = { version = "0.29" }
+display-link = { git = "https://github.com/polina4096/display-link", rev = "3278013" }
+wgpu_patched = { package = "wgpu", path = "wgpu_patched/wgpu" }
+wgpu_pr6210 = { package = "wgpu", git = "https://github.com/madsmtm/wgpu.git", rev = "3850995" }
